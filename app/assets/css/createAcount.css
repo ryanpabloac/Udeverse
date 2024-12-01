@@ -1,0 +1,129 @@
+@import url("./global.css"); 
+#container {
+    display: flex;
+    justify-content: space-between;
+    width: 80dvw;
+    margin: 20dvh auto;
+}
+
+#logo {
+    color: var(--dark-blue);
+    font-weight: 800;
+    font-size: 5rem;
+
+    span {
+        color: var(--green);
+        font-size: 5rem;
+    }
+}
+#slogan {
+    font-size: 1.8rem;
+    color: var(--orange);
+    font-weight: 500;
+}
+
+.box {
+    width: 50%;
+    margin: auto 0;
+}
+.form-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid #d3d3d3;
+}
+.form-area h2 {
+    margin: 2rem 0;
+    font-size: 2.8rem;
+    color: var(--dark-blue);
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.8rem;
+}
+.field label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--dark-blue);
+}
+.field input {
+    font-size: 1.8rem;
+    padding: 2px;
+    border: none;
+    border-bottom: 1px solid var(--dark-blue);
+}
+
+.buttons button{
+    font-size: 1.5rem;
+    padding: 6px;
+    background-color: var(--orange);
+    border: none;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px auto;
+}
+.buttons span, a {
+    font-size: 1.3rem;
+    margin: auto; 
+    color: var(--dark-blue);   
+}
+.buttons a {
+    color: var(--orange);
+}
+
+#error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 1.2rem;
+    padding: 6px;
+    border-radius: 5px ;
+    background-color: #e619192d;
+    margin: 1rem 0;
+}
+#error img {
+    width: 20px;
+}
+#error span {
+    color: #000;
+}
+
+@media (orientation: portrait) {
+    #container {
+        flex-direction: column;
+        margin: 10dvh auto;
+    }
+    #logo {
+        font-size: 4.5rem;
+
+        span {
+            font-size: 4.5rem;
+        }
+    }
+
+    .box {
+        width: 100%;
+        text-align: center;
+        padding-right: 0;
+        padding-bottom: 2rem;
+    }
+    .form-area {
+        border-left: none;
+        border-top: 1px solid #d3d3d3;
+    }
+    .form-area h2 {
+        font-size: 1.6rem;
+    }
+    .buttons button {
+        font-size: 2rem;
+        padding: 6px 10px;
+        margin-bottom: 2rem;
+    }
+    .buttons span a {
+        font-size: 1.5rem;
+    }
+}
