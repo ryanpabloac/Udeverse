@@ -1,5 +1,4 @@
 <?php
-session_start(); 
 function subscribe($userInfo) {
     require  __DIR__ . "/../config/dbConfig.php";
     
@@ -11,20 +10,21 @@ function subscribe($userInfo) {
     $sql->bindValue(":pass", md5($userInfo["password"]));
 
     $sql->execute();
-
-    header("Location: ./../views/acount/login.php?msg=success");
 }
+function authenticate($userInfo) {
+    require  __DIR__ . "/../config/dbConfig.php";
+    
+    $sql = "SELECT username, password FROM users WHERE email = :email AND password = :pass";
+    $sql = $pdo->prepare($sql);
 
-if (!isset($_GET['type']) || empty($_GET['type'])) {
-    header("Location: ./../views/acount/login.php");
-    exit;
-}
+    $sql->bindValue(":email", $userInfo["email"]);
+    $sql->bindValue(":pass", md5($userInfo["password"]));
 
-switch ($_GET["type"]) {
-    case "subscription":
-        subscribe($_SESSION['userData']);
-        break;
+    $sql->execute();
+    if ($sql->rowCount() > 0) {
+        return $sql->fetch(PDO::FETCH_ASSOC);
+    } else {
+        header("Location: ./../views/acount/login.php?msg=fail");
+    }
         
-    default:
-        header("Location: ./../views/acount/subscribe.php?error=!create");
 }

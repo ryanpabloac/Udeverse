@@ -6,22 +6,6 @@
     margin: 20dvh auto;
 }
 
-#logo {
-    color: var(--dark-blue);
-    font-weight: 800;
-    font-size: 5rem;
-
-    span {
-        color: var(--green);
-        font-size: 5rem;
-    }
-}
-#slogan {
-    font-size: 1.8rem;
-    color: var(--orange);
-    font-weight: 500;
-}
-
 .box {
     width: 50%;
     margin: auto 0;
@@ -116,7 +100,11 @@
         border-top: 1px solid #d3d3d3;
     }
     .form-area h2 {
-        font-size: 1.6rem;
+        font-size: 2.2rem;
+        margin: 3rem auto;
+    }
+    .field {
+        margin-bottom: 3rem;
     }
     .buttons button {
         font-size: 2rem;

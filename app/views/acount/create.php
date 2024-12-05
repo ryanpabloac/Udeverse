@@ -8,7 +8,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Udeverse | Cadastre-se</title>
-    <link rel="stylesheet" href="./../../assets/css/createAcount.css">
+    <link rel="stylesheet" href="./../../assets/css/acount.css">
+    <link rel="shortcut icon" href="./../../assets/imgs/logo.png" type="image/x-png">
 </head>
 <body>
     <div id="container">
@@ -33,7 +34,7 @@
                 </div>
                 <div class="field">
                     <label for="confirm-password">CONFIRMAÇÃO DE SENHA</label>
-                    <input type="password" name="confirm-password" id="confirm-password" placeholder="********" required maxlength="30">
+                    <input type="password" name="confirm-password" id="confirm-password" placeholder="********" required minlength="8" maxlength="30">
                 </div>
                 <div class="field buttons">
                     <button type="submit">Cadastrar</button>
@@ -45,7 +46,7 @@
                         </div>
                     <?php endif; ?>
 
-                    <span>Já cadastrado? <a href="">Faça Login!</a></span>
+                    <span>Já cadastrado? <a href="./login.php">Faça Login!</a></span>
                 </div>
             </form>
         </div>
