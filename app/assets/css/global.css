@@ -16,3 +16,19 @@
 
     --bg-dark: #08043e;
 }
+
+#logo {
+    color: var(--dark-blue);
+    font-weight: 800;
+    font-size: 5rem;
+
+    span {
+        color: var(--green);
+        font-size: 5rem;
+    }
+}
+#slogan {
+    font-size: 1.8rem;
+    color: var(--orange);
+    font-weight: 500;
+}

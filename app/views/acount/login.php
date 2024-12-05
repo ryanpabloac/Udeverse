@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Udeverse | Conecte-se</title>
     <link rel="stylesheet" href="./../../assets/css/acount.css">
+    <link rel="shortcut icon" href="./../../assets/imgs/logo.png" type="image/x-png">
 </head>
 <body>
     <div id="container">
